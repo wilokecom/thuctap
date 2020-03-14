@@ -6,7 +6,7 @@ class ResponseValue
     //*
     public function returnArray()
     {
-        return [];
+        return 1001;
     }
     
     public function returnBoolean()
