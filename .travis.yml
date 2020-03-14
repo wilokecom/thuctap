@@ -13,9 +13,8 @@ notifications:
     rooms:
       - wilokegroup:1bS7SWI4jj1Jy9Krr3RSHIwd#general
       - wilokegroup:1bS7SWI4jj1Jy9Krr3RSHIwd#random
-      - wilokegroup:1bS7SWI4jj1Jy9Krr3RSHIwd#hsblog
     on_success: always
     on_failure: always
-env:
-  - TESTFOLDER = tests/controllers
-  - TESTFOLDER = tests/validation
+#env:
+#  - TESTFOLDER = tests/controllers
+#  - TESTFOLDER = tests/validation
