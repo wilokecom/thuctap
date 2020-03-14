@@ -3,6 +3,7 @@ namespace Wiloke\controllers;
 
 class ResponseValue
 {
+    //*
     public function returnArray()
     {
         return [];
