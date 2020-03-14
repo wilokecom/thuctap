@@ -1,4 +1,5 @@
 <?php
+namespace Wiloke\core;
 
 class Request
 {

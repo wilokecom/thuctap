@@ -1,10 +1,11 @@
 <?php
+namespace Wiloke\core\Database;
 
 class Connection
 {
     public static function make($aConfig)
     {
-        $oMysqli = new mysqli(
+        $oMysqli = new \mysqli(
             $aConfig['host'],
             $aConfig['username'],
             $aConfig['password'],

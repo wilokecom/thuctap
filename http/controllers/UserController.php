@@ -1,4 +1,5 @@
 <?php
+use Wiloke\core\App;
 
 class UserController
 {

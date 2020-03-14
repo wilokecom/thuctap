@@ -1,11 +1,19 @@
 {
-  "require": {
-    "phpunit/phpunit":"^8.5",
-    "ext-json": "*"
-  },
   "autoload": {
-    "classmap": [
-      "./"
-    ]
+    "psr-4":{
+      "Wiloke\\":"http/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4":{
+      "WilokeTest\\":"tests/"
+    }
+  },
+  "require": {
+    "ext-json": "*",
+    "ext-mysqli": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8"
   }
 }

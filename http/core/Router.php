@@ -1,4 +1,5 @@
 <?php
+namespace Wiloke\core;
 
 class Router
 {
@@ -60,10 +61,11 @@ class Router
     
     protected function callAction($controller, $method)
     {
-        $oInit = new $controller;
+        $class = 'Wiloke\controllers\\'.$controller;
+        $oInit = new $class;
         
-        if (!method_exists($controller, $method)) {
-            throw new Exception("The controller $controller does not respond to $method method");
+        if (!method_exists($class, $method)) {
+            throw new \Exception("The controller $controller does not respond to $method method");
         }
         
         $oInit->$method();
@@ -79,12 +81,12 @@ class Router
                 );
                 
                 return true;
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 echo $e->getMessage();
                 die;
             }
         }
         
-        throw new Exception('This route does not exist');
+        throw new \Exception('This route does not exist');
     }
 }

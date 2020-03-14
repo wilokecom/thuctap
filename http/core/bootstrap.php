@@ -1,4 +1,11 @@
 <?php
+
+use Wiloke\core\App;
+use Wiloke\core\Database\Connection;
+use Wiloke\core\Database\QueryBuilder;
+use Wiloke\core\Request;
+use Wiloke\core\Router;
+
 App::bind('database', require './config/database.php');
 App::bind('general', require './config/general.php');
 

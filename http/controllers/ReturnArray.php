@@ -1,9 +1,10 @@
 <?php
+namespace Wiloke\controllers;
 
 class ReturnArray
 {
     public function response()
     {
-        return 1;
+        return false;
     }
 }

@@ -1,4 +1,7 @@
 <?php
+namespace Wiloke\controllers;
+
+use Wiloke\core\App;
 
 class PagesController
 {

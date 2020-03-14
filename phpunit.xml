@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<phpunit bootstrap="./vendor/autoload.php"
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
          color="true"
          convertErrorsToException="true"
          convertWarningsToException="true"
          stopOnFailures="false"
          syntaxCheck="true"
 >
-    <testsuies>
-        <testuite name="Wiloke Thuc Tap">
-            <directory>./tests/</directory>
-        </testuite>
-    </testsuies>
+    <testsuites>
+        <testsuite name="Wiloke Thuc Tap">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>
