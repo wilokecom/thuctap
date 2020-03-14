@@ -14,7 +14,7 @@ class DatabaseConnectionTest extends TestCase
                 'host'     => '127.0.0.1',
                 'username' => 'root',
                 'password' => '',
-                'database' => 'myapp_test1'
+                'database' => 'myapp_test'
             ]);
             
             $this->assertTrue(true);
