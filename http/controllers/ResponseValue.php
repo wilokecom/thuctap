@@ -5,7 +5,7 @@ class ResponseValue
 {
     public function returnArray()
     {
-        return 100;
+        return [];
     }
     
     public function returnBoolean()
