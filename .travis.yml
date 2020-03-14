@@ -1,9 +1,12 @@
 language: php
 php:
   - '7.2'
+services:
+  - mysql
 before_script:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
+  - mysql -e 'Create Database If Not Exists myapp_test;'
 script: phpunit --configuration phpunit.xml --coverage-text
 notifications:
   email:
@@ -13,9 +16,11 @@ notifications:
     rooms:
       - wilokegroup:1bS7SWI4jj1Jy9Krr3RSHIwd#general
       - wilokegroup:1bS7SWI4jj1Jy9Krr3RSHIwd#random
-      - wilokegroup:1bS7SWI4jj1Jy9Krr3RSHIwd#hsblog
     on_success: always
     on_failure: always
-env:
-  - TESTFOLDER = tests/controllers
-  - TESTFOLDER = tests/validation
+    template:
+      - "%{repository_slug} (%{commit}) : %{message}"
+      - "Build details: %{build_url}"
+#env:
+#  - TESTFOLDER = tests/controllers
+#  - TESTFOLDER = tests/validation
