@@ -7,7 +7,7 @@ use Wiloke\core\Database\Connection;
 
 class DatabaseConnectionTest extends TestCase
 {
-    public function connectionTest()
+    public function testConnection()
     {
         try {
             $aConnection = Connection::make([
