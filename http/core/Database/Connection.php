@@ -3,6 +3,12 @@ namespace Wiloke\core\Database;
 
 class Connection
 {
+    /**
+     * @param $aConfig
+     *
+     * @return \mysqli
+     * @throws \Exception
+     */
     public static function make($aConfig)
     {
         $oMysqli = new \mysqli(
@@ -13,8 +19,7 @@ class Connection
         );
         
         if ($oMysqli->connect_errno) {
-            echo $oMysqli->connect_error;
-            die;
+            throw new \Exception($oMysqli->connect_error);
         }
         
         return $oMysqli;
