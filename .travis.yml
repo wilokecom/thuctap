@@ -1,10 +1,12 @@
 language: php
 php:
   - '7.2'
+services:
+  - mysql
 before_script:
   - composer self-update
   - composer install --prefer-source --no-interaction --dev
-  - mysql -e 'Create Table If Not Exists tests;'
+  - mysql -e 'Create Database If Not Exists myapp_test;'
 script: phpunit --configuration phpunit.xml --coverage-text
 notifications:
   email:
@@ -19,8 +21,6 @@ notifications:
     template:
       - "%{repository_slug} (%{commit}) : %{message}"
       - "Build details: %{build_url}"
-services:
-  - mysql
 #env:
 #  - TESTFOLDER = tests/controllers
 #  - TESTFOLDER = tests/validation
