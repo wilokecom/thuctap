@@ -10,4 +10,4 @@ notifications:
   on_failure: always
 Your code is like shit, You should resolve it immediately
 env:
-  TESTFOLDER = tests
+  TESTFOLDER = tests/controllers
