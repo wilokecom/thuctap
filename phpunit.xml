@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="vendor/autoload.php"
          color="true"
-         convertErrorsToException="true"
-         convertWarningsToException="true"
+         convertErrorsToException="false"
+         convertWarningsToExceptions="false"
          stopOnFailures="false"
-         syntaxCheck="true"
->
+         syntaxCheck="true">
     <testsuites>
-        <testsuite name="Wiloke Thuc Tap">
+        <testsuite name="WilokeThucTap">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
