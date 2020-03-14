@@ -15,6 +15,9 @@ notifications:
       - wilokegroup:1bS7SWI4jj1Jy9Krr3RSHIwd#random
     on_success: always
     on_failure: always
+    template:
+      - "%{repository_slug} (%{commit}) : %{message}"
+      - "Build details: %{build_url}"
 #env:
 #  - TESTFOLDER = tests/controllers
 #  - TESTFOLDER = tests/validation
